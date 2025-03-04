@@ -36,3 +36,14 @@ E.g., absolute path:
       to go there. 
 
 
+cd /home/repl/seasonal = "change directory"
+cd allows you to go into the seasonal directory.
+
+
+Parents and children
+/home/ is the parent directory of /home/repl
+/repl is the child directory of /home/
+
+
+.. takes you from your current directory to the parent directory, one directory back
+~/../. will take you from /home/repl/seasonal to /home (back two)
