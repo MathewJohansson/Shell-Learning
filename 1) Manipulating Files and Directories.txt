@@ -1,0 +1,26 @@
+How does the shell compare to a desktop interface? 
+
+An operating system is a specific kind of program. 
+It controls the computer's processor, hard drive, and network connection, 
+but its most important job is to run other programs.
+
+Before computers had graphical displays, though, 
+people typed instructions into a program called a command-line shell.
+
+
+
+ What is the relationship between the graphical file explorer that most 
+ people use and the command-line shell?
+
+    They are both interfaces for issuing commands to the operating system.
+
+
+
+pwd = "print working directory" 
+pwd takes you to /home/repl - the directory repl sits within the home directory.
+It's the current directory that you're working in. 
+
+
+ls /home/repl/seasonal = lists the files within the seasonal directory. 
+
+
