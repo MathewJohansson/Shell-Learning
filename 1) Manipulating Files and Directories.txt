@@ -24,3 +24,15 @@ It's the current directory that you're working in.
 ls /home/repl/seasonal = lists the files within the seasonal directory. 
 
 
+Relative path = going from where you are. 
+Absolute path = stating the full path. 
+
+E.g., relative path:
+      You are in the directory /home/repl, just type seasonal to be in 
+      /home/repl/seasonal
+
+E.g., absolute path:
+      No matter what directory you're in, just type /home/repl/seasonal 
+      to go there. 
+
+
