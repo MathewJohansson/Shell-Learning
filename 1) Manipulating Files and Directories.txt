@@ -77,3 +77,13 @@ rm autumn.csv              = removes autumn file when you're in /seasonal/
 rm seasonal/autumn.csv     = removes file while inside home directory.
 
 
+rmdir     = deletes empty directory. Directories can only be deleted if empty. 
+            Delete the files first, then rmdir delete directory. 
+
+
+mkdir yearly          = creates new directory called yearly. 
+mkdir yearly/2017     = creates new directory within that.
+
+
+/tmp    = for temporarily storing files. /tmp is directly below root directory. 
+
