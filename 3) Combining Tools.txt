@@ -1,0 +1,44 @@
+>      = called redirection, it saves any command's output anywhere you want, e.g.,
+head -n 5 seasonal/summer.csv > top.csv      = top 5 are in new file callde top.csv 
+
+tail   = remember that you can also use tail to select the last 5. 
+
+
+Use a command's output as an input:
+head -n 5 seasonal/winter.csv > top.csv
+tail -n 3 top.csv                              = top 5 into new file, show bottom 3 of top 5.
+
+
+Another way of using a command's output as an input:
+head -n 5 seasonal/summer.csv | tail -n 3
+This doesn't save the first result as a new file, but takes the output and uses it straight away.
+
+
+Combining knowledge:
+    Select  all tooth names from col 2 of comma delimited file seasonal/summer.csv, then pipe the
+    result to grep with an inverted match, excluding the header line containing the word "Tooth".
+        cut -d , -f 2 seasonal/summer.csv | grep -v Tooth
+
+    Then select the first of these:
+        cut -d , -f 2 seasonal/summer.csv | grep -v Tooth | head -n 1
+
+
+wc    = prints number of characters, words, and lines in a file. 
+-c    = print only characters from a file. 
+-w    = print only words from a file.  
+-l    = print only lines from a file. 
+
+
+grep 2017-07 seasonal/spring.csv | wc -l   = counts no. of records in file for dates in 2017-07.
+
+
+cut -d , -f 1 seasonal/*         = * is a wildcard, it means "match zero or more characters".
+cut -d , -f 1 */autumn.csv */summer.csv   = uses same directory instead of typing it seasonal.
+
+
+Other wildcards:
+?        = matches a single character, e.g., 201?.txt will produce 2017.txt and 2018.txt
+[...]    = matches any one of the characters inside the square brackets, e.g., 201[78].txt
+{...}    = matches any comma-separated patterns inside the curly brackets, e.g., {*.txt, *.csv}
+
+
