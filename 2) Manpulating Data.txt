@@ -1,0 +1,16 @@
+cat     = view file contents. 
+less          = display one page of the file contents at a time.
+[spacebar]    = page down. 
+q             = quit. 
+
+When giving less the names of several files:
+:n            = move to the next file. 
+:p            = go back to the previous file. 
+:q            = quit. 
+
+
+head                                = view first 10 lines/rows of a file (csv files are rows and cols).
+head seasonal/a then press tab      = lists files starting with a in seasonal.
+head -n 5 seasonal/winter.csv       = view first 5 lines/rows of winter.csv 
+
+
