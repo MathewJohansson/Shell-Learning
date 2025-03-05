@@ -14,3 +14,38 @@ head seasonal/a then press tab      = lists files starting with a in seasonal.
 head -n 5 seasonal/winter.csv       = view first 5 lines/rows of winter.csv 
 
 
+ls -R        = lists everything below a directory.
+ls -R -F     = -F lists all directories with a / after their name, e.g.,
+ls -R -F /home/repl
+
+
+man                        = before anything invokes manual information on it.
+                             You can use :n, :p, and :q on this (above!). 
+man -n +7 .../spring.csv   = outputs last 7 lines of the file. 
+
+
+cut                              = select columns from a file. 
+cut -f 2-5,8 -d , values.csv     = select cols 2-5 and 8, -f to state fields, 
+                                   -d to specify operator, separated by comma. 
+cut -d , -f 1 values.csv         = another way to write it.
+cut -d, -f1 values.csv           = another way to write it.
+
+cut doesn't understand strings, so "Sharma, Rupinder" will be seen as two separate values.
+
+cut -d : -f 2-4 on the line first:second:third: will treat the : as separators. 
+
+
+!head        = after using head previously, this re-runs that previous head command.
+history      = lists previous commands. 
+!head 3      = if the third command was a head command, it will re-run that specific head command.
+
+
+grep                                 = selects lines according to what they contain. 
+grep bicuspid seasonal/winter.csv    = prints all lines in winter.csv that contain "bicuspid". 
+-c                                   = prints a count of matching lines.
+-h                                   = don't print names of files when searching multiple files. 
+-i                                   = ignore case (treats uppercase and lowercase as the same).
+-l                                   = prints names of files that contain matches, not the matches.
+-n                                   = print line numbers for matching lines. 
+-v                                   = invert the match - only show lines that don't match. 
+
