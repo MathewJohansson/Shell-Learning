@@ -1,0 +1,42 @@
+set             = complete list of all saved variables. 
+e.g., 
+set | grep HISTFILESIZE     = how many old commands are stored in command history.
+
+
+USER = variable 
+repl = variables' value 
+
+echo USER       = prints USER
+echo $USER      = prints USER value, repl
+
+
+training=seasonal/summer.csv      = sets file as variable training (no spaces!).
+head -n 1 $training               = obtains first line from summer.csv (above). 
+
+
+For Loops: 
+for filetype in gif jpg png; do echo $filetype; done
+
+
+Repeat a command once for each file: 
+for filename in seasonal/*.csv; do echo $filename; done
+
+
+Record the names of a set of files:
+files=seasonal/*.csv 
+for f in $files; do echo $f; done           = prints list of files in seasonal/
+
+
+Running many commands in a single loop: 
+for file in seasonal/*.csv; do head -n 2 $file | tail -n 1; done
+This prints the second line of each data file. 
+
+
+Print last entry from July 2017 in every seasonal file: 
+for file in seasonal/*.csv; do grep 2017-07 $file | tail -n 1; done
+
+
+Doing many things within a single loop:
+for f in seasonal/*.csv; do echo $f; head -n 2 $f | tail -n 1; done
+For each file in seasonal, print file, print top two files, print bottom one file.
+
