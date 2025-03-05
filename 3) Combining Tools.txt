@@ -42,3 +42,29 @@ Other wildcards:
 {...}    = matches any comma-separated patterns inside the curly brackets, e.g., {*.txt, *.csv}
 
 
+sort    = sorts data in ascending alphabetical order.
+-n      = sort in numerical order. 
+-r      = sort in reverse order. 
+-b      = ignore leading blanks. 
+-f      = fold-case (be case-insensitive). 
+
+E.g.:
+cut -d , -f 2 seasonal/winter.csv | grep -v Tooth | sort -r 
+        = select 2nd col, ,-separated, from winter.csv | select inverse Tooth matches | 
+                                                                    sort descending alphabetically.
+
+
+uniq    = remove duplicated lines. 
+cut -d , -f 2 seasonal/winter.csv | grep -v Tooth | sort |  uniq -c 
+        = select 2nd col, ,-separated, from winter.csv | select inverse Tooth matches |
+                    sort alphabetically, display each tooth once with count for how often it occurs.
+
+
+Ctrl + C        = stops a running command. 
+
+
+Wrapping up: 
+wc -l seasonal/*            = list number of lines in all seasonal data files. 
+wc -l seasonal/* | grep -v total            = then remove line containing 'total'.
+wc -l seasonal/* | grep -v total | sort -n | head -n 1      = find file containing fewest lines.
+
