@@ -1,5 +1,5 @@
 >      = called redirection, it saves any command's output anywhere you want, e.g.,
-head -n 5 seasonal/summer.csv > top.csv      = top 5 are in new file callde top.csv 
+head -n 5 seasonal/summer.csv > top.csv      = top 5 are in new file called top.csv 
 
 tail   = remember that you can also use tail to select the last 5. 
 
