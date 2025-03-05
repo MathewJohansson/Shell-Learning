@@ -17,7 +17,7 @@ people typed instructions into a program called a command-line shell.
 
 
 pwd = "print working directory" 
-pwd takes you to /home/repl - the directory repl sits within the home directory.
+pwd takes you to /home/repl = the directory repl sits within the home directory.
 It's the current directory that you're working in. 
 
 
@@ -40,10 +40,40 @@ cd /home/repl/seasonal = "change directory"
 cd allows you to go into the seasonal directory.
 
 
-Parents and children
-/home/ is the parent directory of /home/repl
-/repl is the child directory of /home/
+Parents and children:
+/home/   = parent directory of /home/repl
+/repl    = child directory of /home/
 
 
-.. takes you from your current directory to the parent directory, one directory back
-~/../. will take you from /home/repl/seasonal to /home (back two)
+..       = takes you from your current directory to the parent directory, one directory back.
+~/../.   = takes you from /home/repl/seasonal to /home (back two).
+cd ~     = also takes you to home directory. 
+
+
+cp original.txt duplicate.txt = copies original, creates new file called duplicate  
+                                with the exact same information inside.
+                                If duplicate.txt already exists, it's now overwritten.
+    If the last parameter to cp is a directory (e.g. /home/repl), all files are copied.
+
+cp seasonal/spring.csv seasonal/summer.csv backup = copies two files and copies them
+                                                    into the backup directory.
+
+
+mv = moving a file, e.g.,
+mv seasonal/spring.csv seasonal/summer.csv backup = moves two files into backup.
+
+
+..        = takes you from current directory to the parent directory.
+~/../.    = takes you from /home/repl/seasonal to /home (back two). 
+
+
+mv                               = also used for renaming files, e.g.,
+mv winter.csv winter.csv.bck     = changes name to now end in .bck
+mv seasonal by-season            = changes directory name 
+
+
+rm                         = remove file, e.g.,
+rm autumn.csv              = removes autumn file when you're in /seasonal/
+rm seasonal/autumn.csv     = removes file while inside home directory.
+
+
